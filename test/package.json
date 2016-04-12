@@ -1,0 +1,13 @@
+{
+  "name": "gulp-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-connect": "^3.2.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.2.0",
+    "gulp-uncss": "^1.0.5"
+  }
+}

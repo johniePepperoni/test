@@ -1,0 +1,282 @@
+@import 'reset';
+$main-color: #9bb0d5;
+$second-color:#8b9ebf;
+.container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.container {
+  height:100%; width: 100%;
+  text-align: center;
+  background: url(../images/background-main.jpg) no-repeat;
+  background-size: cover;
+}
+.fade-in {opacity: 0.7;}
+.button-modal {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-button{
+  border-radius: 2px;
+  background: $main-color;
+  color: #fff;
+  border: none;
+  padding: 10px 25px; 
+  box-shadow:0 3px 0 #758ab2; 
+  &:hover{
+  cursor: pointer;
+  background: $second-color;
+  box-shadow: 0 3px 0 #7e8fad;
+  }
+}
+//Затемнение при открытии модального окна
+  #podlogka {display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.8;
+            z-index: 100;
+        }
+//Модальное окно
+ .modal-window{
+  display: none;  
+  overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+            
+
+    .modal-dialog{   position: relative;
+    width: 714px;
+    height: 530px;
+    background: #fafafa;
+    margin: 100px auto;
+    z-index: 101;
+    }
+    .modal-content{
+     
+     height: 530px;
+ }
+    .modal-header{
+      height: 59px;
+      text-align: center;
+      background: #eeeff5;
+    border-bottom: 5px solid #e3e4e8;
+    }
+    .modal-header-text{ padding-top: 25px;
+                        padding-bottom:  20px;
+      color: $second-color;}
+    table.modal-people{
+      border-spacing: 0;
+      border: solid 1px;
+      border-color: #cacaca;
+      width: 660px;
+      height: 382px;
+      margin: 20px 26px;
+      margin-bottom: 0;
+      .modal-people-list_search{width: 310px / 662px *100%;
+        height: 35px;
+      .modal-people-search{
+        height: 35px ;
+        width: 100%;
+        border-bottom: solid 1px;
+        border-right: solid 1px;
+        border-color: #cacaca; 
+        input{
+          font: normal 14px  sans-serif  ;
+          color: #b6b6b6;
+          border: none;
+          padding: 11px 17px;
+          width: 100%;
+          height: 100%;
+          background-color: #fafafa;
+          background-image: url(../images/magglass.png);
+          background-repeat: no-repeat;
+          background-position: right center ;
+           &::-webkit-input-placeholder {font: normal 13px  sans-serif  ;
+          color: #b6b6b6;
+          padding: 0;
+          vertical-align: middle;
+          letter-spacing:0;
+          word-spacing: 0;
+          }
+        }}
+      
+      .modal-people-list-friends, .modal-people-list-stream{
+        
+        
+        overflow:auto;
+        
+        width: 100%;
+        border-right: solid 1px;
+        border-color: #cacaca;
+        height: (383px-35px);
+        float: left;
+        margin-right: 0;
+        z-index: 103;
+                              
+      }}
+       .modal-people-list-added{width: 100%;overflow: auto;
+        height: 383px-11px;
+        float: left;
+        padding-top: 11px
+      }
+      
+    }
+    .modal-btn-friends{border-radius: 2px;
+background: #fafafa;
+  border-radius: 2px;
+  color: #757575;
+  border: none;
+  padding: 10px 25px; 
+  &:hover{cursor: pointer;
+    background:#eeeff6;
+    box-shadow: 0 3px 0 #e3e5e9;}
+}
+.modal-btn-participants_stream{
+  
+  background: #fafafa;
+  border-radius: 2px;
+  color: #757575;
+  border: none;
+  padding: 10px 25px; 
+  &:hover{
+    cursor: pointer;
+    background: #eeeff6;
+  box-shadow: 0 3px 0 #e3e5e9;
+  }
+}
+.modal-footer{width: 664px;
+  height: 36px;
+  margin: 12px 25px;
+
+}
+.modal-buttons{float:left; 
+padding-left: 5px;
+}
+.modal-button-submit{float: right; }
+.modal-btn-add_friends{border-radius: 2px;
+  background: $main-color;
+  color: #fff;
+  border: none;
+  padding: 10px 25px; 
+  box-shadow:0 3px 0 #758ab2; 
+  &:hover{
+  cursor: pointer;
+  background: $second-color;
+  box-shadow: 0 3px 0 #7e8fad;
+  }}
+
+  //стиль кнопки при выборе вкладки****
+   .selected{
+    background: #eeeff6;
+  border-radius: 2px;
+  color: #757575;
+  border: none;
+  padding: 10px 25px; 
+  box-shadow:0 3px 0 #e3e5e9;
+  }
+  .opacity {
+    opacity: 0.5;
+    z-index: 1;
+    
+  }
+  
+  [class*="modal-people-list-stream-item-"],[class*="modal-people-list-friends-item-"]{height: 47px;
+    width: 283px ;
+
+    margin: 4px 10px;
+    
+    margin-right: 0;
+    vertical-align: middle;
+    div.modal-people-info {display: inline-block;float: left;margin-top: 2px;z-index: 150;
+      color: #758ab2;
+      p{cursor: pointer;
+        font-size: 11px;
+        color: #484848;
+      }}
+    img{margin-right: 12px; float: left;}
+    .arrow-1,.arrow-2,.arrow-3,.arrow-4,.arrow-5
+    {float: right;cursor: pointer;vertical-align: middle;width: 10%;padding-top: 3px;}
+  }
+  .modal-people-list-stream-item-1,.modal-people-list-friends-item-1{margin-top: 11px;}
+  [class*="modal-people-list-added-item"]{display: none;
+  height: 47px;
+    
+  margin: 4px 10px;
+  margin-top: 0px;
+    margin-right: 0;
+    vertical-align: middle;
+    div.modal-people-info {display: inline-block;float: left;margin-top: 2px; color: #758ab2;
+    p{cursor: pointer;
+        font-size: 11px;
+        color: #484848;
+      }}
+    img{margin-right: 12px; float: left;}
+//.test1_1,.test1_2,.test1_3,.test1_4,.test1_5
+[class*="test"]{padding-top: 13px;padding-right:10px;
+  float: right;
+  cursor: pointer;vertical-align: middle;
+}}
+}
+//TOOLTIP*******************************************************************************************
+.ui-tooltip, .arrow:after {
+    background: black;
+    border: none;
+  }
+  .ui-tooltip {
+    text-align: center;
+    height: 71px;
+    width:71px;
+    opacity: 0.9;
+    vertical-align: middle;
+    color: white;
+    font-size:  14px/20px ;
+    line-height: 20px;
+    box-shadow: 6px 5px 9px -9px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+//END*****************************************************************************************************
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_draggerRail
+{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}/*scroll */
